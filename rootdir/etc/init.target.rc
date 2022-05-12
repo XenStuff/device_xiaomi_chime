@@ -191,6 +191,10 @@ on boot
 #Load WLAN driver
     insmod /vendor/lib/modules/qca_cld3_wlan.ko
 
+    # Set SPI infrared radiator permission
+    chown system system /dev/ir_spi
+    chmod 0660 /dev/ir_spi
+
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
 
