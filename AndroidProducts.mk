@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_chime.mk
+    $(LOCAL_DIR)/p404_chime.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_chime-user \
-    lineage_chime-userdebug \
-    lineage_chime-eng
+    p404_chime-user \
+    p404_chime-userdebug \
+    p404_chime-eng
