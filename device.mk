@@ -32,7 +32,6 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/xiaomi \
     vendor/qcom/opensource/usb/etc
 
 # Flatten APEXs for performance
@@ -364,7 +363,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2 \
     android.hardware.power@1.2.vendor \
-    android.hardware.power-service-qti
+    android.hardware.power-service \
+    android.hardware.power-impl
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml 
+
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
